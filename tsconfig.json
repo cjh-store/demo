@@ -1,0 +1,25 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": [
+    "types/env.d.tsv.d.ts",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.vue",
+    "types/**/*.d.ts"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "noImplicitAny": false,
+    "isolatedModules": false,
+    "paths": {
+      "@/*": ["./src/*"],
+      "/#/*": ["./types/*"]
+    },
+    "types": ["unplugin-vue-define-options/macros-global"]
+  },
+  "references": [
+    {
+      "path": "./tsconfig.config.json"
+    }
+  ]
+}
